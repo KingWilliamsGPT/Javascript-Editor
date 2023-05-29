@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/editor.css">
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <script>
+        function pr(event) {
+            console.log(event)
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ide">
+            <div class="entry log">
+                <span class="entry-active-count-sign">&gt;</span>
+                <input class="entry-input" autofocus placeholder="Enter code here">
+            </div>
+            <div class="push-logger log ">
+                some code result
+            </div>
+            <div class="js-log log ">
+                <span class="js-cout-sign">&lt;&middot;</span>
+                <div class="js-log-content">undefined</div>
+            </div>
+
+            <div class="entry log ">
+                <span class="entry-active-count-sign">&gt;</span>
+                <input type="text-area" class="entry-input" autofocus placeholder="Enter code here">
+            </div>
+            <div class="error log ">
+                <span class="err-img"><img src="images/error.gif" alt="X" style="width:20px; height:20px"></span>
+                <div class="err-text">Uncaught ReferenceError: fjkdjf is not defined at
+                    <anonymous>:1:1</div>
+            </div>
+            <div class="warning log">
+                <span class="warn-img"><img src="images/warning.gif" alt="warn" style="width:20px; height:20px"></span>
+                <div class="warn-text">Warning: we are out of fuel</div>
+            </div>
+            <div class="log js-log">
+                <span class="js-cout-sign">&lt;&middot;</span>
+                <div class="js-log-content">undefined</div>
+            </div>
+            <div class="warning log">
+                <span class="warn-img"><img src="images/warning.gif" alt="warn" style="width:20px; height:20px"></span>
+                <div class="warn-text">Warning: we are out of fuel</div>
+            </div>
+            <div class="error log">
+                <span class="err-img"><img src="images/error.gif" alt="X" style="width:20px; height:20px"></span>
+                <div class="err-text">Uncaught ReferenceError: fjkdjf is not defined at
+                    <anonymous>:1:1</div>
+            </div>
+            <div class="push-logger log">
+                code output
+            </div>
+            <div class="js-log log ">
+                <span class="js-cout-sign">&lt;&middot;</span>
+                <div class="js-log-content">undefined</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var x = document.querySelector("input");
+        var y;
+        if (x) {
+            x.addEventListener("keypress", function(event) {
+                console.log(event);
+                y = event;
+            });
+        }
+    </script>
+    <script src="js/editor.js"></script>
+</body>
+
+</html>
